@@ -8,16 +8,20 @@ class Room:
     
 bolier = ("Bolier", "description")
 fule_tank = ("Fule Tank", "description")
-engine_1 = ("Engine", "description")
-engine_2 = ("Engine", "description")
+engine = ("Engine", "description")
 hyper_drive = ("Hyper Drive", "description")
 control_switch = ("Control Switch", ("description"))
 blueprint = ("Blueprint", "description")
 airlock = ("Airlock", "description")
+walk_way =("Walk Way", "description")
+salvage_compartment = ("Salvage Compartment", "description")
+cooling_system =("Cooling System", "description")
+terminal = ("Terminal", "description")
+door = ("Doors", "description")
+vent = ("Vents", "description")
 
-
-Engine_Room = [[engine_1],
-               [airlock,bolier],
-               [engine_2],
-               [],
-               []]
+Engine_Room = [[engine,airlock,bolier,fule_tank,cooling_system,door],
+               [hyper_drive,salvage_compartment,walk_way,control_switch,vent],
+               [engine,vent,walk_way,bolier,terminal,blueprint],
+               [hyper_drive,salvage_compartment,walk_way,vent,door],
+               [engine,airlock,bolier,fule_tank,cooling_system,door]]
