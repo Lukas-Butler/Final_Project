@@ -18,9 +18,9 @@ Lukas: finish map
 Savannah: make Player
 Kaleb: make movement
 * 1 - 3: finish version 2.0
-Lukas: Enemies
+Lukas: make maps and teleport between
 Savannah: Iventory and items
-Kaleb: make maps and teleport between
+Kaleb: enemies
 * 4 - 7: finish version 3.0
 Lukas: Lives
 Savannah: Score Board
