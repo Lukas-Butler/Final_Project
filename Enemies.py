@@ -25,3 +25,4 @@ class Enemy:
             self.enemy_move(row, col)
         elif p.location == p.direction == "left":
             self.enemy_move(row, col)
+
