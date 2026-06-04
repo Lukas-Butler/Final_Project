@@ -6,7 +6,6 @@ class Room:
     def __str__(self):
         return(self.name)
     
-# made an object for each engine room
 bolier = ("Bolier", "description")
 fule_tank = ("Fule Tank", "description")
 engine = ("Engine", "description")
