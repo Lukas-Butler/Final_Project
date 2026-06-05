@@ -1,6 +1,7 @@
+import Room as r
 class Player:
     def __init__(self, location, name, game_map):
-        self.name = 'Barbara'
+        self.name = name
         self.location = location
         self.map = game_map
 
@@ -11,6 +12,9 @@ class Player:
         print(room.description)
 
     def movement(self, direction):
+        print("which direction would you like to go:")
+        choice = (input("Choice: ")).lower
+        self.direction = choice
         row, col = self.location
         #up
         if direction == "up":
