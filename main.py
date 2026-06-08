@@ -26,5 +26,3 @@ def action():
 barbara = p.Player("Barbara", r.Engine_Room)
 Engine_Room = m.map("Engine_Room",[0,0], r.Engine_Room)
 action()
-
-
