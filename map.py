@@ -1,12 +1,9 @@
 from tabulate import tabulate as t
-class map:
-    def __init__(self, name, start, map):
+class map:    
+    def __init__(self, name, start, grid):
         self.name = name
         self.starting_coordinates = start
-        self.map = map
-    def getMap(self):
-        return self.map
+        self.grid = grid
+
     def view_map(self):
-        print(t(self.map,tablefmt="double_grid"))
-    def getStart(self):
-        return self.starting_coordinates
+        print(t(self.grid,tablefmt="double_grid"))

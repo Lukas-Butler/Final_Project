@@ -4,24 +4,24 @@ class Room:
         self.description = description
     
     def __str__(self):
-        return(f"{self.name}")
+        return(self.name)
     
-bolier = ("Bolier", "description")
-fule_tank = ("Fule Tank", "description")
-engine = ("Engine", "description")
-hyper_drive = ("Hyper Drive", "description")
-control_switch = ("Control Switch", ("description"))
-blueprint = ("Blueprint", "description")
-airlock = ("Airlock", "description")
-walk_way =("Walk Way", "description")
-salvage_compartment = ("Salvage Compartment", "description")
-cooling_system =("Cooling System", "description")
-terminal = ("Terminal", "description")
-door = ("Doors", "description")
-vent = ("Vents", "description")
+bolier = Room("Bolier", "description")
+fule_tank = Room("Fule Tank", "description")
+engine = Room("Engine", "description")
+hyper_drive = Room("Hyper Drive", "description")
+control_switch = Room("Control Switch", ("description"))
+blueprint = Room("Blueprint", "description")
+airlock = Room("Airlock", "description")
+walk_way = Room("Walk Way", "description")
+salvage_compartment = Room("Salvage Compartment", "description")
+cooling_system = Room("Cooling System", "description")
+terminal = Room("Terminal", "description")
+door = Room("Doors", "description")
+vent = Room("Vents", "description")
 
-Engine_Room = [[engine,airlock,bolier,fule_tank,cooling_system,door],
+Engine_Room = [[engine,airlock,bolier,fule_tank,cooling_system,walk_way],
                [hyper_drive,salvage_compartment,walk_way,control_switch,vent],
-               [engine,vent,walk_way,bolier,terminal,blueprint],
-               [hyper_drive,salvage_compartment,walk_way,vent,door],
-               [engine,airlock,bolier,fule_tank,cooling_system,door]]
+               [engine,vent,walk_way,bolier,terminal,door],
+               [hyper_drive,salvage_compartment,walk_way,vent,blueprint],
+               [engine,airlock,bolier,fule_tank,cooling_system,walk_way]]
