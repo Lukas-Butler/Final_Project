@@ -19,6 +19,12 @@ class Player:
         self.location = Engine_Room.getStart()
         return grid
 
+    def current_room(self):
+        row, col = self.location
+        room = self.map.Rooms[row][col]
+        print("you are in {room}")
+        print(room.description)
+
     def movement(self):
         print("which direction would you like to go:\n" \
               " - up\n" \
@@ -34,9 +40,6 @@ class Player:
                     tempRoom = Engine_Room.getMap()[self.location[0]][self.location[1]]
                     print(tempRoom.name)
                     print(tempRoom.description) 
-            else:
-                print("cant go that way twin")
-                return
         #down
         elif direction == "down":
             if self.location[0] < max_row:
@@ -70,7 +73,6 @@ class Player:
         #goes back to action in main
         elif direction == "back":
             g.moving = False
-
         else:
             print("i have no clue what that means")
 
