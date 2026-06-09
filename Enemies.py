@@ -12,7 +12,7 @@ class Enemy:
 
     def move (self, p.location, p.direction, row, col, map):
         if p.location == p.direction == "up":
-            row[0] + rand.randrange(0,2) or col[0] + rand.randrange(0,2)
+            row[0] + rand.randrange(0,2) col[0] + rand.randrange(0,2)
         else:
             print("The enemy decided to not move")
         elif p.location == p.direction == "down":
