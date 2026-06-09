@@ -3,7 +3,6 @@ class Item:
         self.name = name
         self.description = description
         self.value = value
-    
     def print_description(self):
         return(self.description)
     
