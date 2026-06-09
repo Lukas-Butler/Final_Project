@@ -10,9 +10,6 @@ class Player:
         print("you are in {room}")
         print(room.description)
 
-<<<<<<< Updated upstream
-    def movement(self, direction):
-=======
     def movement(self):
         print("which direction would you like to go:\n" \
               " - up\n" \
@@ -20,7 +17,7 @@ class Player:
               " - right\n" \
               " - left")
         direction = (input("Choice: "))
->>>>>>> Stashed changes
+
         row, col = self.location
         #up
         if direction == "up":

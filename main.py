@@ -1,7 +1,6 @@
 import player as p
 import Room as r
 
-
 def action():
     print("choose one of the following options")
     print(" - view the map (map)")
