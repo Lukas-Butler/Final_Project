@@ -22,20 +22,19 @@ class Player:
         if direction == "up":
             if row > 0:
                 row -= 1
-                print("hi")
             else:
                 print("cant go that way twin")
                 return
         #down
         elif direction == "down":
-            if row > len(self.map.rooms[0]) - 1:
+            if row < len(self.map[0]) - 1:
                 row += 1
             else:
                 print("cant go that way twin")
                 return
         #right
         elif direction == "right":
-            if col > len(self.map.rooms[0]) - 1:
+            if col < len(self.map[0]) - 1:
                 col += 1
             else:
                 print("cant go that way twin")
