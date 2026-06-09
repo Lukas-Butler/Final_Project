@@ -6,16 +6,24 @@ class Player:
 
     def current_room(self):
         row, col = self.location
-        room = self.map.rooms[row][col]
+        room = self.map.Rooms[row][col]
         print("you are in {room}")
         print(room.description)
 
-    def movement(self, direction):
+    def movement(self):
+        print("which direction would you like to go:\n" \
+              " - up\n" \
+              " - down\n" \
+              " - right\n" \
+              " - left")
+        direction = (input("Choice: "))
+
         row, col = self.location
         #up
         if direction == "up":
             if row > 0:
                 row -= 1
+                print("hi")
             else:
                 print("cant go that way twin")
                 return
