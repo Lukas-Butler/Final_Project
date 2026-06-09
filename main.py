@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import player as p
 import Room as r
 
@@ -22,4 +20,3 @@ def action():
 
 barbara = p.Player([0,0],"Barbara", r.Engine_Room)
 action()
->>>>>>> Stashed changes
