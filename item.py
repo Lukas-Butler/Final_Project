@@ -3,7 +3,6 @@ class Item:
         self.name = name
         self.description = description
         self.value = value
-    
     def print_description(self):
         return(self.description)
     
@@ -14,3 +13,4 @@ money = Item("Money", "description", 4)
 
 rarity = [scrap, scrap, goo, goo, goo, goo, engine, 
           engine, engine, money, money]
+
