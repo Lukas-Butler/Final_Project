@@ -34,7 +34,7 @@ class Player:
                 return
         #right
         elif direction == "right":
-            if col < len(self.map.rooms[0]) - 1:
+            if col < len(self.map.rooms) - 1:
                 col += 1
             else:
                 print("cant go that way twin")
