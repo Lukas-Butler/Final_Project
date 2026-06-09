@@ -22,7 +22,4 @@ def action():
 barbara = p.Player([0,0],"Barbara", r.Engine_Room)
 Engine_Room = m.map("Engine_Room",[2,4], r.Engine_Room)
 action()
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
