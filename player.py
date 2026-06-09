@@ -10,7 +10,6 @@ class Player:
         print("you are in {room}")
         print(room.description)
 
-
     def movement(self):
         print("which direction would you like to go:\n" \
               " - up\n" \
