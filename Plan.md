@@ -3,7 +3,7 @@
 ### Race of enemies: Viltrumites 
 ### List of requirements:
 * player and enemy movement
-*  Maps(3 that are living place, command center, engine room)
+* Maps(3 that are living place, command center, engine room)
 * enemies
 * inventory system
 * items on floor

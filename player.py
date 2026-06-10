@@ -29,31 +29,46 @@ class Player:
         direction = (input("Choice: "))
         #up
         if direction == "up":
+<<<<<<< HEAD
             if self.location[0] > mini_row:
                     self.location[0] -= 1
                     tempRoom = Engine_Room.getMap()[self.location[0]][self.location[1]]
                     print(tempRoom.name)
                     print(tempRoom.description) 
+=======
+            if row > 0:
+                row -= 1
+>>>>>>> a7c78cb3c2045bd5eac5b8a99a782844599a18d3
             else:
                 print("cant go that way twin")
                 return
         #down
         elif direction == "down":
+<<<<<<< HEAD
             if self.location[0] < max_row:
                 self.location[0] += 1
                 tempRoom = Engine_Room.getMap()[self.location[0]][self.location[1]]
                 print(tempRoom.name)
                 print(tempRoom.description) 
+=======
+            if row < len(self.map.rooms) - 1:
+                row += 1
+>>>>>>> a7c78cb3c2045bd5eac5b8a99a782844599a18d3
             else:
                 print("cant go that way twin")
                 return
         #right
         elif direction == "right":
+<<<<<<< HEAD
             if self.location[1] < max_column:
                 self.location[1] += 1
                 tempRoom = Engine_Room.getMap()[self.location[0]][self.location[1]]
                 print(tempRoom.name)
                 print(tempRoom.description) 
+=======
+            if col < len(self.map.rooms) - 1:
+                col += 1
+>>>>>>> a7c78cb3c2045bd5eac5b8a99a782844599a18d3
             else:
                 print("cant go that way twin")
                 return

@@ -8,8 +8,8 @@ def action():
         g.moving = True
         print("choose one of the following options")
         print(" - view the map (map)")
-        print(" - move thourgh the map (move)")
-        print(" - quite the game (quit)")
+        print(" - move through the map (move)")
+        print(" - quit the game (quit)")
         choice = input("Choice: ").lower()
         if choice == "map":
             Engine_Room.view_map()
