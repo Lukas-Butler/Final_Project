@@ -1,3 +1,4 @@
+
 import map as m
 import Room as r
 import global_variables as g
@@ -5,8 +6,6 @@ max_row = 4
 mini_row = 0
 mini_column = 0
 max_column = 4
-
-
 
 class Player:
     def __init__(self, name, game_map):
@@ -75,8 +74,8 @@ class Player:
             g.moving = False
         else:
             print("i have no clue what that means")
-
 Engine_Room = m.map("Engine_Room",[0,0], r.Engine_Room)        
+
 
 
 
