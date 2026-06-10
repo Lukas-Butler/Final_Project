@@ -4,7 +4,7 @@ class Room:
         self.description = description
     
     def __str__(self):
-        return(f"{self.name}")
+        return(self.name)
 
     
     
@@ -40,12 +40,21 @@ computer = ("Computer", "description")
 navigation = ("Nabigation", "description")
 map_ = ("Map", "description")
 door = ("Door", "description")
+blank = ("place holder", "description")
 
 #making the rooms into a array
-Engine_Room = [[engine,airlock,bolier,fule_tank,cooling_system,door],
+Engine_Room = [[engine,airlock,bolier,fule_tank,cooling_system,terminal],
                [hyper_drive,salvage_compartment,walk_way,control_switch,vent],
-               [engine,vent,walk_way,bolier,terminal,door],
+               [engine,vent,walk_way,bolier,door],
                [hyper_drive,salvage_compartment,walk_way,vent,blueprint],
                [engine,airlock,bolier,fule_tank,cooling_system,walk_way]]
-living_place = []
-command_center = []
+living_place = [[blank,blank,blank,blank,blank],
+                [blank,blank,blank,blank,blank],
+                [stair,blank,blank,blank,elevator],
+                [blank,blank,blank,blank,blank],
+                [blank,blank,blank,blank,blank]]
+command_center = [[blank,blank,blank,blank,blank],
+                  [blank,blank,blank,blank,blank],
+                  [door,blank,blank,blank,blank],
+                  [blank,blank,blank,blank,blank],
+                  [blank,blank,blank,blank,blank]]

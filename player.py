@@ -17,12 +17,11 @@ class Player:
         return grid
 
     def movement(self):
-        print("which direction would you like to go:\n" \
-              " - up\n" \
-              " - down\n" \
-              " - right\n" \
-              " - left\n"
-              " - back")
+        print(" - up\n" \
+            " - down\n" \
+            " - right\n" \
+            " - left\n"
+            " - back")
         direction = (input("Choice: "))
         #up
         if direction == "up":
@@ -72,7 +71,6 @@ class Player:
             print("i have no clue what that means")
 
 Engine_Room = m.map("Engine_Room",[0,0], r.Engine_Room)        
-
 
 
 
