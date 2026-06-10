@@ -3,7 +3,6 @@ import map as m
 import Room as r
 import global_variables as g
 
-
 def action():
     while g.playing:
         g.moving = True

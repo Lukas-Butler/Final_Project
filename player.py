@@ -1,4 +1,3 @@
-
 import map as m
 import Room as r
 import global_variables as g
@@ -18,12 +17,6 @@ class Player:
         self.location = Engine_Room.getStart()
         return grid
 
-    def current_room(self):
-        row, col = self.location
-        room = self.map.Rooms[row][col]
-        print("you are in {room}")
-        print(room.description)
-
     def movement(self):
         print("which direction would you like to go:\n" \
               " - up\n" \
@@ -35,17 +28,20 @@ class Player:
         #up
         if direction == "up":
             if self.location[0] > mini_row:
-                    self.location[0] -= 1
-                    tempRoom = Engine_Room.getMap()[self.location[0]][self.location[1]]
-                    print(tempRoom.name)
-                    print(tempRoom.description) 
+                self.location[0] -= 1
+                tempRoom = Engine_Room.getMap()[self.location[0]][self.location[1]]
+                print(tempRoom[0])
+                print(tempRoom[1])
+            else:
+                print("cant go that way twin")
+                return
         #down
         elif direction == "down":
             if self.location[0] < max_row:
                 self.location[0] += 1
                 tempRoom = Engine_Room.getMap()[self.location[0]][self.location[1]]
-                print(tempRoom.name)
-                print(tempRoom.description) 
+                print(tempRoom[0])
+                print(tempRoom[1])
             else:
                 print("cant go that way twin")
                 return
@@ -54,8 +50,8 @@ class Player:
             if self.location[1] < max_column:
                 self.location[1] += 1
                 tempRoom = Engine_Room.getMap()[self.location[0]][self.location[1]]
-                print(tempRoom.name)
-                print(tempRoom.description) 
+                print(tempRoom[0])
+                print(tempRoom[1])
             else:
                 print("cant go that way twin")
                 return
@@ -64,8 +60,8 @@ class Player:
             if self.location[1] > mini_column:
                 self.location[1] -= 1
                 tempRoom = Engine_Room.getMap()[self.location[0]][self.location[1]]
-                print(tempRoom.name)
-                print(tempRoom.description) 
+                print(tempRoom[0])
+                print(tempRoom[1])
             else:
                 print("cant go that way twin")
                 return
