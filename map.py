@@ -7,3 +7,9 @@ class map:
 
     def view_map(self):
         print(t(self.grid,tablefmt="double_grid"))
+
+    def getMap(self):
+        return self.grid
+    
+    def getStart(self):
+        return self.starting_coordinates
