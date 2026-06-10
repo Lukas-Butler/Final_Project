@@ -6,6 +6,8 @@ class Room:
     def __str__(self):
         return(f"{self.name}")
 
+    
+    
 # made an object for each engine room
 bolier = ("Bolier", "description")
 fule_tank = ("Fule Tank", "description")
@@ -42,8 +44,8 @@ door = ("Door", "description")
 #making the rooms into a array
 Engine_Room = [[engine,airlock,bolier,fule_tank,cooling_system,door],
                [hyper_drive,salvage_compartment,walk_way,control_switch,vent],
-               [engine,vent,walk_way,bolier,terminal,blueprint],
-               [hyper_drive,salvage_compartment,walk_way,vent,door],
-               [engine,airlock,bolier,fule_tank,cooling_system,door]]
+               [engine,vent,walk_way,bolier,terminal,door],
+               [hyper_drive,salvage_compartment,walk_way,vent,blueprint],
+               [engine,airlock,bolier,fule_tank,cooling_system,walk_way]]
 living_place = []
 command_center = []
