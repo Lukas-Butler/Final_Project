@@ -1,28 +1,31 @@
 import player as p
-import Room as r
 import random as rand
 
+row = [0]
+col = [0]
 
 
 class Enemy:
-    def __init__(self, species, location, r):
+    def __init__(self, species, location, row, col):
         self.species = species
         self.location = location
-        self.map = r
+        self.row = row
+        self.col = col
+
 
     def enemy_move(self, row, col):
         if rand.randrange(0,2) == 0:
-            row[0] + rand.randrange(0,2) 
+            self.row[0] + rand.randrange(0,2)
         elif rand.randrange(0,1) == 1:
-            col[0] + rand.randrange(0,2)
+            self.col[0] + rand.randrange(0,2)
 
-    def move (self, p.location, p.direction, row, col, map):
-        if p.location == p.direction == "up":
-            self.enemy_move(row, col)
-        elif p.location == p.direction == "down":
-            self.enemy_move(row, col)
-        elif p.location == p.direction == "right":
-            self.enemy_move(row, col)
-        elif p.location == p.direction == "left":
-            self.enemy_move(row, col)
 
+    def move(self, direction, row, col, map):
+        if p.direction == "up":
+            self.enemy_move(row, col)
+        elif p.direction == "down":
+            self.enemy_move(row, col)
+        elif p.direction == "right":
+            self.enemy_move(row, col)
+        elif p.direction == "left":
+            self.enemy_move(row, col)
