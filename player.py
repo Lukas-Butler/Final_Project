@@ -1,3 +1,4 @@
+
 class Player:
     def __init__(self, location, name, game_map):
         self.name = name
