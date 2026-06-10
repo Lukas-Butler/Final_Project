@@ -5,5 +5,11 @@ class map:
         self.starting_coordinates = start
         self.grid = grid
 
+    def getMap(self):
+        return self.grid
+    
     def view_map(self):
         print(t(self.grid,tablefmt="double_grid"))
+    
+    def getStart(self):
+        return self.starting_coordinates

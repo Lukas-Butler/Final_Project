@@ -4,7 +4,8 @@ class Room:
         self.description = description
     
     def __str__(self):
-        return(self.name)
+        return(f"{self.name}")
+
     
     
 # made an object for each engine room
@@ -48,4 +49,3 @@ Engine_Room = [[engine,airlock,bolier,fule_tank,cooling_system,door],
                [engine,airlock,bolier,fule_tank,cooling_system,walk_way]]
 living_place = []
 command_center = []
-
