@@ -3,6 +3,25 @@ import map as m
 import Room as r
 import global_variables as g
 
+def introduction():
+    print("Your Barbara, the best of the best, and your invading,"
+    "a ship that has Viltrumites aliens on on and you need,"
+    "to gather items to repair your ship. Don't get caught!")
+    print('Press "c" to proceed')
+    print('Press "q" to quit')
+    choice = input("Choice: ").lower()
+    if choice == "c":
+        print("Radical!")
+        p.playing = True
+    elif choice == "q":
+        p.playing = False
+        quit()
+    else:
+        print("Hey! listen here pal, we aren't even in the game and yet your acting like a simpleton!, try again")
+        introduction()
+
+
+
 def action():
     while g.playing:
         g.moving = True
@@ -39,4 +58,5 @@ def action():
         else:
             print("not an option... try again")
 barbara = p.Player("Barbara", g.Engine_Room)
+introduction()
 action()
