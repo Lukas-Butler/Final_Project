@@ -12,27 +12,31 @@ def action():
         print(" - quit the game (quit)")
         choice = input("Choice: ").lower()
         if choice == "map":
-            Engine_Room.view_map()
+            g.current_location.view_map()
         elif choice == "move":
             while g.moving:
                 print("which direction would you like to go: ")
-                if barbara.location == [2,4] and barbara.map == Engine_Room:
-                    pass
-                if barbara.location == [2,0] and barbara.map == living_place:
-                    pass
-                if barbara.location == [2,4] and barbara.map == living_place:
-                    pass
-                if barbara.location == [2,0] and barbara.map == command_center:
-                    pass
+                if barbara.location == [2,4] and barbara.map == g.Engine_Room:
+                   g.current_location = g.living_place
+                   barbara.map = g.current_location
+                   barbara.location = [2,1]
+                if barbara.location == [2,0] and barbara.map == g.living_place:
+                   g.current_location = g.Engine_Room
+                   barbara.map = g.current_location
+                   barbara.location = [2,3]
+                if barbara.location == [2,4] and barbara.map == g.living_place:
+                   g.current_location = g.command_center
+                   barbara.map = g.current_location
+                   barbara.location = [2,1]
+                if barbara.location == [2,0] and barbara.map == g.command_center:
+                   g.current_location = g.living_place
+                   barbara.map = g.current_location
+                   barbara.location = [2,3]
                 barbara.movement()
         elif choice == "quit":
             g.playing = False
             quit()
         else:
             print("not an option... try again")
-
-Engine_Room = m.map("Engine_Room",[2,4], r.Engine_Room)
-living_place = m.map("Living Place",[2,2],r.living_place)
-command_center = m.map("Command Center",[2,0],r.command_center)
-barbara = p.Player("Barbara", Engine_Room)
+barbara = p.Player("Barbara", g.Engine_Room)
 action()

@@ -7,16 +7,16 @@ mini_column = 0
 max_column = 4
 class Player:
     def __init__(self, name, game_map):
-        self.location =  Engine_Room.getStart()
+        self.location =  g.current_location.getStart()
         self.name = name
         self.map = game_map
 
-    def setMap(self,grid):
-        self.map = grid
-        self.location = Engine_Room.getStart()
-        return grid
+    def setMap(self,game_map):
+        self.map = game_map
+        self.location = g.current_location.getStart()
+        return game_map
 
-    def movement(self):
+    def movement(self): 
         print(" - up\n" \
             " - down\n" \
             " - right\n" \
@@ -27,9 +27,9 @@ class Player:
         if direction == "up":
             if self.location[0] > mini_row:
                 self.location[0] -= 1
-                tempRoom = Engine_Room.getMap()[self.location[0]][self.location[1]]
-                print(tempRoom[0])
-                print(tempRoom[1])
+                tempRoom = g.current_location.getMap()[self.location[0]][self.location[1]]
+                print(tempRoom.name)
+                print(tempRoom.description) 
             else:
                 print("cant go that way twin")
                 return
@@ -37,9 +37,9 @@ class Player:
         elif direction == "down":
             if self.location[0] < max_row:
                 self.location[0] += 1
-                tempRoom = Engine_Room.getMap()[self.location[0]][self.location[1]]
-                print(tempRoom[0])
-                print(tempRoom[1])
+                tempRoom = g.current_location.getMap()[self.location[0]][self.location[1]]
+                print(tempRoom.name)
+                print(tempRoom.description) 
             else:
                 print("cant go that way twin")
                 return
@@ -48,9 +48,9 @@ class Player:
 
             if self.location[1] < max_column:
                 self.location[1] += 1
-                tempRoom = Engine_Room.getMap()[self.location[0]][self.location[1]]
-                print(tempRoom[0])
-                print(tempRoom[1])
+                tempRoom = g.current_location.getMap()[self.location[0]][self.location[1]]
+                print(tempRoom.name)
+                print(tempRoom.description) 
             else:
                 print("cant go that way twin")
                 return
@@ -58,9 +58,9 @@ class Player:
         elif direction == "left":
             if self.location[1] > mini_column:
                 self.location[1] -= 1
-                tempRoom = Engine_Room.getMap()[self.location[0]][self.location[1]]
-                print(tempRoom[0])
-                print(tempRoom[1])
+                tempRoom = g.current_location.getMap()[self.location[0]][self.location[1]]
+                print(tempRoom.name)
+                print(tempRoom.description) 
             else:
                 print("cant go that way twin")
                 return
@@ -69,8 +69,4 @@ class Player:
             g.moving = False
         else:
             print("i have no clue what that means")
-
-Engine_Room = m.map("Engine_Room",[0,0], r.Engine_Room)        
-
-
 
