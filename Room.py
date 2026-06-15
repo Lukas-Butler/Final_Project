@@ -34,13 +34,18 @@ workout_room = Room("Workout Room", "were you get ripped")
 living_room = Room("Living Room", "were you hangout with friends")
 stair = Room("Stair", "you enter engine room")
 elevator = Room("Elevator", "you enter command center")
+
 #objects of each location in command center
-office = Room("Office", "description")
-computer = Room("Computer", "description")
-navigation = Room("Nabigation", "description")
-map_ = Room("Map", "description")
-door = Room("Door", "description")
-blank = Room("place holder", "description")
+office = Room("Office", "were the important people go to talk about business")
+computer = Room("Computer", "were you check to make sure the ship is going the right way")
+navigation = Room("Nabigation", "tells you which planet your going to")
+map_ = Room("Map", "shows the whole blueprints of the ship")
+door = Room("Door", "brought you to living place")
+cabin_light = Room("Cabin Lights", "makes it so you can see")
+red_button = Room("Red Button", "if you push it the ship goes boom")
+chair = Room("Chair"," were the navigator's seat")
+switch = Room("Switch", "turns on the power")
+vending_machine =Room("Vending Machine","were people go to fill up")
 
 #making the rooms into a array
 Engine_Room = [[engine,airlock,fule_tank,cooling_system,terminal],
@@ -55,8 +60,8 @@ living_place = [[science_lab,kitchen,med_bay,life_support,cryo],
                 [table,bed,kitchen,workout_room,shower],
                 [locker,science_lab,med_bay,life_support,cryo]]
 
-command_center = [[blank,blank,blank,blank,blank],
-                  [blank,blank,blank,blank,blank],
-                  [door,blank,blank,blank,blank],
-                  [blank,blank,blank,blank,blank],
-                  [blank,blank,blank,blank,blank]]
+command_center = [[vending_machine,office,computer,navigation,switch],
+                  [computer,cabin_light,switch,map_,red_button],
+                  [door,chair,office,vending_machine,computer],
+                  [switch,computer,cabin_light,vending_machine,map_],
+                  [office,chair,cabin_light,computer,navigation]]
