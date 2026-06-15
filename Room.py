@@ -31,7 +31,7 @@ cryo = Room("Cryo", "were you go to bed for a long time")
 life_support = Room("Life Support", "you dont want to be here this is were you die")
 science_lab = Room("Science Lab", "were you figure out what that weird create you brought along lives")
 workout_room = Room("Workout Room", "were you get ripped")
-living_room = Room("Living Room", "were you hangpout with friends")
+living_room = Room("Living Room", "were you hangout with friends")
 stair = Room("Stair", "you enter engine room")
 elevator = Room("Elevator", "you enter command center")
 #objects of each location in command center
