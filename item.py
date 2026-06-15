@@ -7,9 +7,9 @@ class Item:
         return(self.description)
     
 scrap = Item("Scrap", "description", 1)
-goo = Item("Goo", "description", 2)
+goop = Item("Goop", "description", 2)
 engine = Item("Engine", "description", 3)
 money = Item("Money", "description", 4)
 
-rarity = [scrap, scrap, goo, goo, goo, goo, engine, 
+rarity = [scrap, scrap, goop, goop, goop, goop, engine, 
           engine, engine, money, money]
