@@ -4,25 +4,28 @@ import map as m
 import Room as r
 import global_variables as g
 
-def introduction():
+def introduction(): # Starts the game and tells the player the story
     print("Your Barbara, the best of the best, and your invading,"
     "a ship that has Viltrumites aliens on on and you need,"
     "to gather items to repair your ship. Don't get caught!")
+    # Options for the player to choose from
     print('Press "c" to proceed')
     print('Press "q" to quit')
-    choice = input("Choice: ").lower()
-    if choice == "c":
+    choice = input("Choice: ").lower()  #The player picks an option
+    if choice == "c": # 'C' starts the game
         print("Radical!")
         p.playing = True
-    elif choice == "q":
+    elif choice == "q": # 'Q' quits the game
+        print("Fine! like I care! see ya loser!")
         p.playing = False
         quit()
     else:
+        # If the player doesnt comply with the instructions, They get insulted and the intro repeats
         print("Hey! listen here pal, we aren't even in the game and yet your acting like a simpleton!, try again")
         introduction()
 
 
-def action():
+def action(): # The actual game itself
     while g.playing:
         g.moving = True
         print("choose one of the following options")

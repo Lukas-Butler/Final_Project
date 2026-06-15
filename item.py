@@ -5,11 +5,12 @@ class Item:
         self.value = value
     def print_description(self):
         return(self.description)
-    
-scrap = Item("Scrap", "description", 1)
-goop = Item("Goop", "description", 2)
-engine = Item("Engine", "description", 3)
-money = Item("Money", "description", 4)
 
-rarity = [scrap, scrap, goop, goop, goop, goop, engine, 
+# Items in the game
+scrap = Item("Scrap", "Scrap metal", 1)
+goop = Item("Goop", "Strange Thick liquid", 2)
+engine = Item("Engine", "Self explanatory", 3)
+money = Item("Money", "Self explanatory, but just because I have to, its currency", 4)
+
+rarity = [scrap, scrap, goop, goop, goop, goop, engine, # The rarity of the items
           engine, engine, money, money]
