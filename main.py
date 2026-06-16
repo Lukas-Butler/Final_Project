@@ -59,8 +59,14 @@ def action(): # The actual game itself
             g.current_location.view_map()
         # if the choice is move do this
         elif choice == "move":
+            treasure = r.choice(rarity)
+            found.spawn_item(treasure)
             while g.moving:
                 print("which direction would you like to go: ")
+                #if the player and the item are on the same location 
+                # put it the players bag
+                if barbara.location == found.location:
+                    barbara.keep(treasure)
                 #if the player location is door and map on engine room do this
                 if barbara.location == [2,4] and barbara.map == g.Engine_Room:
                    #makes the map to living place and makes them spawn at [2,1]
@@ -85,10 +91,6 @@ def action(): # The actual game itself
                    g.current_location = g.living_place
                    barbara.map = g.current_location
                    barbara.location = [2,3]
-                #if the player and the item are on the same location 
-                # put it the players bag
-                if barbara.location == found.location:
-                    barbara.keep(found)
                 #after 10 movements spawn an item
                 if g.count >= 10:
                     treasure = r.choice(rarity)
