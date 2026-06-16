@@ -1,28 +1,26 @@
 import random as r
+import player as p
+import global_variables as g
 col = 0
 row = 0
-spawn = [col,row]
+
 class Item:
-    def __init__(self, name, description, value, location):
+    def __init__(self, name, description, value, ):
         self.name = name
         self.description = description
         self.value = value
-        self.location = location
+
+        self.location = 0
 
     def print_description(self):
-        return(self.description)
-    def spawn_item(self):
+        return f"You found a {self.description}."
+    
+    def spawn_item(self, item):
         row = r.randrange(0,5)
         col = r.randrange(0,5)
-        
+        spawn = [row,col]
+        self.location = spawn
+        print(f"{item.name} has spawned at{row,col}")
 
 
 
-# Items in the game
-scrap = Item("Scrap", "Scrap metal", 1)
-goop = Item("Goop", "Strange Thick liquid", 2)
-engine = Item("Engine", "Self explanatory", 3)
-money = Item("Money", "Self explanatory, but just because I have to, its currency", 4)
-
-rarity = [scrap, scrap, goop, goop, goop, goop, engine, # The rarity of the items
-          engine, engine, money, money]

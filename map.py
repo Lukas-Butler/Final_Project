@@ -1,5 +1,6 @@
 from tabulate import tabulate as t
 import player as p
+
 class map:    
     def __init__(self, name, start, grid):
         self.name = name

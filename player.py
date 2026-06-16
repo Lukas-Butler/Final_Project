@@ -2,6 +2,10 @@
 import map as m
 import Room as r
 import global_variables as g
+import bag as b
+import highscore as h
+import random as r
+import item as i
 #variables
 max_row = 4
 mini_row = 0
@@ -10,10 +14,12 @@ max_column = 4
 
 class Player:
     #what is need when a player object is needed and used
-    def __init__(self, name, game_map):
+    def __init__(self, name, game_map, bagCapacity):
         self.location =  g.current_location.getStart()
         self.name = name
         self.map = game_map
+        self.bag = b.Bag(bagCapacity)
+
     #get the map the player moves around on
     def setMap(self,game_map):
         self.map = game_map
@@ -90,3 +96,16 @@ class Player:
         else:
             print("i have no clue what that means")
 
+    def calculate_score(self):
+        self.divers_score = self.bag.evaluate_loot()
+        print(f"Total value of your loot: {self.divers_score}")
+        print(f"Current high score: {h.highScore}")
+        if self.divers_score > int(h.highScore):
+            h.newHighScore(str(self.divers_score))
+            print(f"New high score: {self.divers_score}")
+        else:
+            print("better luck next time.")
+
+    def keep(self, item):
+        print(f"you found {item.name}")
+        self.bag.add_to_inventory(item)

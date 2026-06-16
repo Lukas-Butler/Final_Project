@@ -1,13 +1,22 @@
 #imports of different python code
-import player as p
-import map as m
-import Room as r
 import global_variables as g
+import bag as b
+import map as m
+import player as p
+import item as i
+import random as r
+import highscore as h
+import item as i
 
 def introduction(): # Starts the game and tells the player the story
-    print("Your Barbara, the best of the best, and your invading,"
-    "a ship that has Viltrumites aliens on on and you need,"
+    print("Your Barbara, the best of the best, and your invading,\n"
+    "a ship that has Viltrumites aliens on and you need,\n"
     "to gather items to repair your ship. Don't get caught!")
+    print("items will spawn every 10 movements and then \n" 
+    "will disaper after another 10 movements so move fast \n" 
+    "to grabe them and don't miss out")
+    h.getHighScore()
+    print(f"Current high score: {h.highScore}")
     # Options for the player to choose from
     print('Press "c" to proceed')
     print('Press "q" to quit')
@@ -65,17 +74,37 @@ def action(): # The actual game itself
                    g.current_location = g.living_place
                    barbara.map = g.current_location
                    barbara.location = [2,3]
+                if barbara.location == found.location:
+                    barbara.keep(found)
+                if g.count >= 10:
+                    treasure = r.choice(rarity)
+                    found.spawn_item(treasure)
+                    g.count = 0
                 #call on the movement script
                 barbara.movement()
+                print(f"barbara is at location {barbara.location}")
                 g.count += 1
         elif choice == "quit":
             #make playing false and stop the game
             g.playing = False
-            quit()
         #if choice does not equal any of those do this 
         else:
             print("not an option... try again")
+
+def ending():
+    barbara.calculate_score()
+    print("you go back to your ship and repair it")
+
 #make a player class as barbara
-barbara = p.Player("Barbara", g.Engine_Room)
+barbara = p.Player("Barbara", g.Engine_Room, 10)
+# Items in the game
+scrap = i.Item("Scrap", "Scrap metal", 1,  )
+goop = i.Item("Goop", "Strange Thick liquid", 2,  )
+engine = i.Item("Engine", "Self explanatory", 3,  )
+money = i.Item("Money", "Self explanatory, but just because I have to, its currency", 4, )
+rarity = [scrap, scrap, goop, goop, goop, goop, engine, # The rarity of the items
+          engine, engine, money, money]
+found = r.choice(rarity)
 introduction()
 action()
+ending()
