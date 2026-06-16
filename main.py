@@ -33,6 +33,7 @@ def action():
                    barbara.map = g.current_location
                    barbara.location = [2,3]
                 barbara.movement()
+                g.count += 1
         elif choice == "quit":
             g.playing = False
             quit()
