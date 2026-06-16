@@ -16,10 +16,13 @@ class Item:
         col = r.randrange(0,5)
         
 
-scrap = Item("Scrap", "description", 1,spawn)
-goo = Item("Goo", "description", 2,spawn)
-engine = Item("Engine", "description", 3,spawn)
-money = Item("Money", "description", 4,spawn)
 
-rarity = [scrap, scrap, goo, goo, goo, goo, engine, 
+
+# Items in the game
+scrap = Item("Scrap", "Scrap metal", 1)
+goop = Item("Goop", "Strange Thick liquid", 2)
+engine = Item("Engine", "Self explanatory", 3)
+money = Item("Money", "Self explanatory, but just because I have to, its currency", 4)
+
+rarity = [scrap, scrap, goop, goop, goop, goop, engine, # The rarity of the items
           engine, engine, money, money]
