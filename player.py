@@ -96,16 +96,19 @@ class Player:
         else:
             print("i have no clue what that means")
 
+    #grabs every item from your bag and then calculate the score
     def calculate_score(self):
         self.divers_score = self.bag.evaluate_loot()
         print(f"Total value of your loot: {self.divers_score}")
         print(f"Current high score: {h.highScore}")
+        #if the new score is bigger then old high score do this
         if self.divers_score > int(h.highScore):
+            #make that score the new highsocre
             h.newHighScore(str(self.divers_score))
             print(f"New high score: {self.divers_score}")
         else:
             print("better luck next time.")
-
+    #says what item you found and adds it to bag
     def keep(self, item):
         print(f"you found {item.name}")
         self.bag.add_to_inventory(item)
